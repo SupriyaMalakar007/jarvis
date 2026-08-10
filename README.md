@@ -60,7 +60,7 @@ gemma4:e2b
 
 However, model compatibility can depend on the Ollama version, available RAM/VRAM, and the Jarvis configuration.
 
-💻 Requirements
+#💻 Requirements
 Windows
 
 Recommended:
@@ -90,7 +90,8 @@ Make sure the installation includes:
 MSVC C++ build tools
 Windows SDK
 C++ build tools
-🚀 Installation
+
+#🚀 Installation
 1. Clone the repository
 git clone https://github.com/SupriyaMalakar007/Jarvis.git
 cd Jarvis
@@ -117,7 +118,8 @@ pip install -r requirements-windows.txt
 If the project provides a general requirements file:
 
 pip install -r requirements.txt
-🦙 Ollama Setup
+
+#🦙 Ollama Setup
 
 Install Ollama and verify:
 
@@ -179,7 +181,7 @@ Check the Windows microphone permission settings
 
 You can also test the microphone directly through Windows.
 
-🗣️ Speech Recognition
+#🗣️ Speech Recognition
 
 Jarvis uses Faster-Whisper for speech recognition.
 
