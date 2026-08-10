@@ -62,7 +62,7 @@ However, model compatibility can depend on the Ollama version, available RAM/VRA
 
 ---
 
-#💻 Requirements
+# 💻 Requirements
 Windows
 
 Recommended:
