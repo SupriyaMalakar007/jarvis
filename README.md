@@ -32,7 +32,7 @@ Jarvis uses [Ollama](https://ollama.com/) as the default local LLM provider.
 
 The recommended model for the current Windows setup is:
 
-```text
+
 llama3.2:3b
 
 Install it with:
