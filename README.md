@@ -60,6 +60,8 @@ gemma4:e2b
 
 However, model compatibility can depend on the Ollama version, available RAM/VRAM, and the Jarvis configuration.
 
+---
+
 #💻 Requirements
 Windows
 
