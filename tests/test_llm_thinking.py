@@ -233,7 +233,7 @@ class TestDictationThinking:
             hotkey="ctrl+shift+d",
             sample_rate=16000,
             transcribe_lock=threading.Lock(),
-            thinking=True,
+            thinking=False,
         )
         assert engine._thinking is True
 
