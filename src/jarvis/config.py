@@ -42,12 +42,8 @@ SUPPORTED_CHAT_MODELS: Dict[str, Dict[str, str]] = {
 }
 
 # The default chat model (first in the supported list)
-DEFAULT_CHAT_MODEL = "gemma4:e2b"
-# Ollama-path default for the fast tier (voice intent, tool routing, and the
-# other real-time classification passes). On an OpenAI-compatible chat
-# provider an unset fast model resolves to the active chat model instead —
-# this pull-name only exists on Ollama.
-DEFAULT_FAST_MODEL = "gemma4:e2b"
+DEFAULT_CHAT_MODEL = "llama3.2:3b"
+DEFAULT_FAST_MODEL = DEFAULT_CHAT_MODEL
 
 
 def get_supported_model_ids() -> set[str]:
@@ -551,7 +547,7 @@ def get_default_config() -> Dict[str, Any]:
         "whisper_device": "auto",  # "cuda" (recommended if available), "auto", or "cpu" (only for faster-whisper)
         "whisper_compute_type": "int8",
         "whisper_vad": True,
-        "whisper_min_confidence": 0.3,  # Filter low-confidence segments (hallucinations)
+        "whisper_min_confidence": 0.15,  # Filter low-confidence segments (hallucinations)
         "whisper_no_speech_threshold": 0.5,  # Hard cutoff: reject segments where no_speech_prob >= this
         "whisper_min_audio_duration": 0.15,
         "whisper_min_word_length": 1,
@@ -581,7 +577,7 @@ def get_default_config() -> Dict[str, Any]:
         # DEFAULT_FAST_MODEL on the Ollama chat path, the chat model on an
         # OpenAI-compatible provider.
         "fast_model": "",
-        "intent_judge_timeout_sec": 6.0,
+        "intent_judge_timeout_sec": 3.0,
         "intent_judge_thinking_enabled": False,  # Enable thinking for intent judge (adds latency to wake detection)
 
         # Transcript Buffer - used for both retention and context passed to intent judge

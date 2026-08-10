@@ -89,7 +89,7 @@ class LLMBackend(ABC):
         chat_model: str,
         system_prompt: str,
         user_content: str,
-        timeout_sec: float = 10.0,
+        timeout_sec: float = 120.0,
         thinking: bool = False,
         num_ctx: int = 4096,
         temperature: Optional[float] = None,
@@ -107,7 +107,7 @@ class LLMBackend(ABC):
         system_prompt: str,
         user_content: str,
         on_token: Optional[Callable[[str], None]] = None,
-        timeout_sec: float = 30.0,
+        timeout_sec: float = 120.0,
         thinking: bool = False,
     ) -> Optional[str]:
         """Streaming variant; ``on_token`` is invoked once per chunk.
@@ -119,7 +119,7 @@ class LLMBackend(ABC):
         self,
         chat_model: str,
         messages: List[Dict[str, Any]],
-        timeout_sec: float = 30.0,
+        timeout_sec: float =  120.0,
         extra_options: Optional[Dict[str, Any]] = None,
         tools: Optional[List[Dict[str, Any]]] = None,
         thinking: bool = False,

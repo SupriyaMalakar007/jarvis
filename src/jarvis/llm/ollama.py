@@ -252,7 +252,7 @@ class OllamaBackend(LLMBackend):
             "messages": sanitised,
             "stream": False,
             "cache_prompt": True,
-            "options": {"num_ctx": 8192},
+            "options": {"num_ctx": 4096,"num_predict": 128},
             "think": thinking,
         }
         # ``extra_options`` keys land at the Ollama wire root for known
